@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Press Start 2p', arial;
+
+}
+
+body {
+  background-image: url("../img/fundo.jpg");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+main {
+  border: 4px solid #FF5371;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 88.6vh;
+  width: 95vw;
+  position: relative;
+  top: 2.5vw;
+  left: 2.5vw;
+  background-image: url("../img/fundo02.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.seta {
+  position: absolute;
+  top: 5vw;
+  left: 5vw;
+  z-index: 1;
+  border-radius: 100%;
+  border: none;
+  border: 3px solid #ff537000;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+
+}
+
+.seta:hover {
+  border: 3px solid #FF5371;
+
+}
+
+.som {
+  position: fixed;
+  bottom: 1.5vw;
+  left: 1.5vw;
+}
+
+.sombotao {
+  background-color: rgba(0, 110, 207, 0);
+  border-radius: 100%;
+  border: none;
+  cursor: pointer
+}
+
+.lv {
+  background-color: #EA6363;
+  color: white;
+  padding: 18px;
+  font-size: 1.5rem;
+  margin: 8px;
+  border: 3px solid white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.lv:hover {
+  color: #EA6363;
+  background-color: #ffffff;
+}
+
+.lv:disabled {
+  color: #ffffff;
+  background-color: #a3a2a25a;
+  cursor: default;
+}
