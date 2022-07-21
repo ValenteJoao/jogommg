@@ -65,8 +65,8 @@ main {
 @media (max-width:767px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.8vh;
-    width: 62vw;
+    grid-column-gap: 62px;
+    width: 35vh;
   }
 }
 

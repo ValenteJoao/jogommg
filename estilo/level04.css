@@ -42,7 +42,7 @@ main {
     flex-wrap: wrap;
     align-items: center;
     align-content: center;
-    height: 90vh;
+    height: 92vh;
     width: 92vw;
     margin-left: 2vh;
   }
@@ -59,9 +59,11 @@ main {
 
 @media (max-width:767px) {
   .grid {
+    grid-row-gap: 1px;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 16px;
-    width: 74vw;
+    grid-column-gap: 22px;
+    width: 39vh;
+    height: 72vh;
   }
 }
 
@@ -77,8 +79,8 @@ main {
 
 @media (max-width:767px) {
   .card {
-    width: 10vh;
-    height: 14vh;
+    width: 11vh;
+    height: 15vh;
   }
 }
 
