@@ -147,8 +147,8 @@ var tema = document.getElementById('pagein')
 
 setTimeout(function () {
 
-  document.getElementById('tela').remove()
-  tema.innerHTML += perdeu
+  //document.getElementById('tela').remove()
+  //tema.innerHTML += perdeu
 
 }, 17000);
 

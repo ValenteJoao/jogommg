@@ -17,6 +17,14 @@ body {
   height: 100vh;
 }
 
+@media (max-width:767px) {
+  body {
+    height: 100vh;
+    width: 100vw;
+    padding-top: 4vh;
+  }
+}
+
 main {
   border: 4px solid #FF5371;
   border-radius: 20px;
@@ -51,22 +59,16 @@ main {
 
 }
 
+@media (max-width:767px) {
+  .seta {
+    top: 17vw;
+    left: 7vw;
+  }
+}
+
 .seta:hover {
   border: 3px solid #FF5371;
 
-}
-
-.som {
-  position: fixed;
-  bottom: 1.5vw;
-  left: 1.5vw;
-}
-
-.sombotao {
-  background-color: rgba(0, 110, 207, 0);
-  border-radius: 100%;
-  border: none;
-  cursor: pointer
 }
 
 .lv {
