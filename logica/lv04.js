@@ -55,7 +55,7 @@ const createCard = (persona) => {
   const front = createElement('div', 'face front');
   const back = createElement('div', 'face back');
 
-  front.style.backgroundImage = `url('../img/${persona}.jpg')`;
+  front.style.backgroundImage = `url('https://raw.githubusercontent.com/ValenteJoao/jogommg/main/img/${persona}.jpg')`;
 
   card.appendChild(front);
   card.appendChild(back);
