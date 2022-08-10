@@ -17,6 +17,7 @@ body {
   height: 43.3vw;
   width: 95vw;
   margin: 0 auto;
+  overflow-y: hidden;
 }
 
 @media (max-width:767px) {
@@ -71,7 +72,7 @@ main {
   background-color: rgb(75, 75, 75);
   border-radius: 5px;
   position: relative;
-  transition: all 400ms ease;
+  transition: all 250ms ease;
   transform-style: preserve-3d;
 }
 

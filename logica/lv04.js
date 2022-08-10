@@ -44,7 +44,7 @@ function checarcartas() {
       SegundaCarta = '';
 
 
-    }, 500);
+    }, 400);
   }
 
 }
@@ -128,7 +128,7 @@ function startTimer(duration, display) {
 //exibicao tela
 window.onload = function para() {
 
-  var duration = 15  // Sempre passar em segundos
+  var duration = 20  // Sempre passar em segundos
   var display = document.querySelector("#timer") // Elemento para exibir
   startTimer(duration, display); // Inicia a funcao
 }

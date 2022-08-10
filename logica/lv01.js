@@ -20,8 +20,6 @@ var SegundaCarta = '';
 function checarcartas() {
   const primeiraPersona = PrimeiraCarta.getAttribute('data-persona');
   const segundaPersona = SegundaCarta.getAttribute('data-persona');
-  console.log(primeiraPersona)
-  console.log(segundaPersona)
 
   if (primeiraPersona == segundaPersona) {
 
@@ -41,7 +39,7 @@ function checarcartas() {
       SegundaCarta = '';
 
 
-    }, 500);
+    }, 400);
   }
 
 }

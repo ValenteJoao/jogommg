@@ -42,7 +42,7 @@ function checarcartas() {
       SegundaCarta = '';
 
 
-    }, 500);
+    }, 400);
   }
 
 }
