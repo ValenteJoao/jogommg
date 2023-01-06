@@ -120,10 +120,11 @@ function startTimer(duration, display) {
 
 }
 
+var duration = 15  // Sempre passar em segundos
+var timerOff = duration * 1000 + 2000
+
 //exibicao tela
 window.onload = function para() {
-
-  var duration = 35  // Sempre passar em segundos
   var display = document.querySelector("#timer") // Elemento para exibir
   startTimer(duration, display); // Inicia a funcao
 }
@@ -145,7 +146,7 @@ setTimeout(function () {
   document.getElementById('tela').remove()
   tema.innerHTML += perdeu
 
-}, 37000);
+}, timerOff);
 
 
 //Ganhou

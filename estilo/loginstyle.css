@@ -38,6 +38,13 @@ body {
   margin-bottom: -10px;
 }
 
+@media (max-width:767px) {
+  .brain {
+    max-width: 20vh;
+    margin-bottom: -10px;
+  }
+}
+
 h1 {
   display: flex;
   text-align: center;

@@ -1,4 +1,15 @@
 const grid = document.querySelector('.grid');
+const vida = document.querySelector('.vida');
+
+const life = ['<img src="img/life.png">',
+  '<img src="img/life.png">',
+  '<img src="img/life.png">',
+  '<img src="img/life.png">',
+  '<img src="img/life.png">']
+
+const lifeloss = `<img src="img/lifeloss.png">`
+
+var lifescontrol = 6;
 
 //ADD CARDS
 const persona = [
@@ -7,7 +18,11 @@ const persona = [
   'serjao',
   'vindiesel',
   'bichao',
+  'cacete',
+  'irineu',
 ];
+
+checarvidas()
 
 const createElement = (tag, className) => {
   const element = document.createElement(tag);
@@ -21,7 +36,6 @@ var SegundaCarta = '';
 function checarcartas() {
   const primeiraPersona = PrimeiraCarta.getAttribute('data-persona');
   const segundaPersona = SegundaCarta.getAttribute('data-persona');
-
   if (primeiraPersona == segundaPersona) {
 
     PrimeiraCarta.firstChild.classList.add('acertou');
@@ -33,6 +47,11 @@ function checarcartas() {
   }
   else {
     setTimeout(() => {
+      life.pop();
+      life.unshift(lifeloss);
+
+      checarvidas();
+
       PrimeiraCarta.classList.remove('reveal-card');
       SegundaCarta.classList.remove('reveal-card');
 
@@ -63,6 +82,7 @@ const createCard = (persona) => {
 }
 
 function revealCard({ target }) {
+
   if (target.parentNode.className.includes('reveal-card')) {
     return;
   }
@@ -101,6 +121,26 @@ var username = localStorage.getItem('player');
 document.querySelector('.username').innerHTML = username;
 
 
+//funcao das vidas
+
+var perdeulife = `<main class="perdeu">
+<h1 class="comunicado">Suas vidas acabaram! <br>Você perdeu!</h1>
+<a class="jogarnovamente"href="level05.html">Jogar novamente</a>
+<a class="voltar" href="niveis.html">Voltar</a>
+</main>`
+
+function checarvidas() {
+  vida.innerHTML = ""
+  life.forEach(lifes => vida.innerHTML += lifes);
+  lifescontrol--;
+
+  if (lifescontrol == 0) {
+    document.getElementById('tela').remove()
+    tema.innerHTML += perdeulife
+  }
+}
+
+
 //funcao do do timer
 
 function startTimer(duration, display) {
@@ -120,7 +160,7 @@ function startTimer(duration, display) {
   }, 1000);
 
 }
-var duration = 15  // Sempre passar em segundos
+var duration = 30  // Sempre passar em segundos
 var timerOff = duration * 1000 + 2000
 
 //exibicao tela
@@ -134,7 +174,7 @@ window.onload = function para() {
 
 var perdeu = `<main class="perdeu">
 <h1 class="comunicado">O tempo acabou! <br>Você perdeu!</h1>
-<a class="jogarnovamente"href="level02.html">Jogar novamente</a>
+<a class="jogarnovamente"href="level05.html">Jogar novamente</a>
 <a class="voltar" href="niveis.html">Voltar</a>
 </main>`
 
@@ -153,8 +193,7 @@ setTimeout(function () {
 //Ganhou
 
 var ganhou = `<main class="perdeu">
-<h1 class="comunicado">Você ganhou!</h1>
-<a class="jogarnovamente"href="level03.html">Avançar Level</a>
+<h1 class="comunicado">Fim de Jogo! <br>Você Zerou!</h1>
 <a class="voltar" href="niveis.html">Voltar</a>
 </main>`
 
@@ -163,10 +202,9 @@ setInterval(function () {
 
   var win = document.getElementsByClassName('face front acertou');
 
-  if (win.length == 10) {
+  if (win.length == 14) {
     document.getElementById('tela').remove();
     tema.innerHTML += ganhou;
-    localStorage.setItem('chave2', 'ok');
   }
 
 }, 1000);

@@ -83,6 +83,19 @@ main {
   cursor: pointer;
 }
 
+@media (max-width:767px) {
+  .lv {
+    background-color: #EA6363;
+    color: white;
+    padding: 18px;
+    font-size: 1.2rem;
+    margin: 8px;
+    border: 3px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+}
+
 .lv:hover {
   color: #EA6363;
   background-color: #ffffff;

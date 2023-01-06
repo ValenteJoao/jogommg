@@ -22,8 +22,6 @@ var SegundaCarta = '';
 function checarcartas() {
   const primeiraPersona = PrimeiraCarta.getAttribute('data-persona');
   const segundaPersona = SegundaCarta.getAttribute('data-persona');
-  console.log(primeiraPersona)
-  console.log(segundaPersona)
 
   if (primeiraPersona == segundaPersona) {
 
@@ -123,11 +121,12 @@ function startTimer(duration, display) {
   }, 1000);
 
 }
+var duration = 15  // Sempre passar em segundos
+var timerOff = duration * 1000 + 2000
 
 //exibicao tela
 window.onload = function para() {
 
-  var duration = 20  // Sempre passar em segundos
   var display = document.querySelector("#timer") // Elemento para exibir
   startTimer(duration, display); // Inicia a funcao
 }
@@ -149,7 +148,7 @@ setTimeout(function () {
   document.getElementById('tela').remove()
   tema.innerHTML += perdeu
 
-}, 22000);
+}, timerOff);
 
 
 //Ganhou
