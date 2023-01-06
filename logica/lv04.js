@@ -196,7 +196,7 @@ setTimeout(function () {
 
 var ganhou = `<main class="perdeu">
 <h1 class="comunicado">Você ganhou!</h1>
-<a class="jogarnovamente"href="level04.html">Avançar Level</a>
+<a class="jogarnovamente"href="level05.html">Avançar Level</a>
 <a class="voltar" href="niveis.html">Voltar</a>
 </main>`
 
