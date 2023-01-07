@@ -85,12 +85,14 @@ const loadGame = () => {
   const duplicatepersona = [...persona, ...persona];
   const embaralhado = duplicatepersona.sort(() => Math.random() - 0.5);
 
-  embaralhado.forEach((persona) => {
+  setTimeout(() => {
+    embaralhado.forEach((persona) => {
 
-    const card = createCard(persona);
-    grid.appendChild(card);
+      const card = createCard(persona);
+      grid.appendChild(card);
 
-  });
+    });
+  }, 1000)
 }
 
 loadGame();
